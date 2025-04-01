@@ -1,16 +1,17 @@
-from data.object import Object
+from data.icecreamcone import IceCreamCone
 import pygame as pg
 import random 
 import data.config as cng
 import math
 
-class Player(Object):
+class Player(IceCreamCone):
     def __init__(self, image):
         super().__init__(image)
         self.position = pg.math.Vector2(random.randint(0+self.image.get_width(),cng.SCREEN_X-self.image.get_width()), cng.FLOOR-self.image.get_height())
         self.rect = pg.rect.Rect(self.position.x, self.position.y, self.width, self.height)
         self.num_cones = 0
         self.scoops = {}
+        self.score = 0
 
 
     def move_up(self):

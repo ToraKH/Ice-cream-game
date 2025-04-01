@@ -47,15 +47,15 @@ def show_credit(screen, credit_bg):
 
     creators = font1.render('DEVELOPER & SUPPORT', True, (255, 255, 255))
     game_devs = font1.render('Game developer: Tora K. Homme', True, (255, 255, 255))
-    em_sup = font1.render('Emotional support to Tora: Sigurd A. Lorentzen', True, (255, 255, 255))
+    em_sup = font1.render('Tester: Sigurd A. Lorentzen', True, (255, 255, 255))
 
     images = font1.render('IMAGES', True, (255, 255, 255))
     img = font1.render('Ice cream found at PIXILART' , True, (255, 255, 255))
     img2 = font1.render('Ice cream recolored by Tora K. Homme' , True, (255, 255, 255))
     img3 = font1.render('Backgrounds made by Tora K. Homme' , True, (255, 255, 255))
 
-    music = font1.render('MUSIC', True, (255, 255, 255))
-    song = font1.render('Song by Geoff Harvey', True, (255, 255, 255))
+    # music = font1.render('MUSIC', True, (255, 255, 255))
+    # song = font1.render('Song by Geoff Harvey', True, (255, 255, 255))
 
     #Print text at correct place of the screen
     screen.blit(credit_title, ((cng.SCREEN_X-credit_title.get_width())/2, 4*credit_title.get_height()))
@@ -75,7 +75,12 @@ def show_credit(screen, credit_bg):
     # Exit game if pressed
     exit()
 
-    
+def show_text(screen, player):
+    """Prints text on screen"""
+    # Register chosen font + its size
+    font = pg.font.SysFont('arial', 20)
+    score_player1 = font.render('Coins: ' + str(player.score), True, (255, 255, 255))
+    screen.blit(score_player1, (15, cng.SCREEN_Y - 2*score_player1.get_height()))    
 
 def play_music():
     """Plays the music"""

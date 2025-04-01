@@ -5,7 +5,7 @@ import data.config as cng
 
 class Scoop(Object):
     """represents an ice cream scoop"""
-    def __init__(self, pos_x, pos_y, image, flavor):
+    def __init__(self, pos_x, pos_y, image, flavor, id):
         super().__init__(image)
         self.position = pg.math.Vector2(pos_x, pos_y) 
         self.rect = pg.rect.Rect(self.position.x, self.position.y, self.width, self.height)
@@ -13,6 +13,7 @@ class Scoop(Object):
         self.flavor = flavor
         self.caught = False
         self.number = -1
+        self.customer_id = id
 
 
     def update(self):

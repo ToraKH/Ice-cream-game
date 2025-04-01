@@ -19,6 +19,8 @@ MUSIC = "data/music/tap_room.mp3"
 VOLUME = 0.33
 
 CUSTOMERAREA = 200
+MARGIN_Y = 20
+MARGIN_X = 40
 FLOOR = SCREEN_Y-140
 SPEED_X = 10
 SPEED_y = 19
